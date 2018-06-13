@@ -6,4 +6,4 @@ docker run --name my-postgres -d -p 5432:5432 -e POSTGRES_DB=tester postgres
 
 # start a command line instance of postgres
 
-docker run -it --rm --link my-postgres:postgres postgres psql -h postgres -U postgres
+docker run -it --rm --link my-postgres:postgres postgres psql -h postgres -U postgres tester

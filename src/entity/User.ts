@@ -2,11 +2,15 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn() public id: number;
+  @PrimaryGeneratedColumn({ type: "integer" })
+  public id: number;
 
-  @Column() public firstName: string;
+  @Column({ type: "varchar", length: 100 })
+  public firstName: string;
 
-  @Column() public lastName: string;
+  @Column({ type: "varchar", length: 100 })
+  public lastName: string;
 
-  @Column() public age: number;
+  @Column({ type: "smallint" })
+  public age: number;
 }
