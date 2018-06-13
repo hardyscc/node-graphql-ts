@@ -1,3 +1,3 @@
 export const Query = {
-  hello: (_, { name }) => `Hello ${name || "World"}`
+  hello: (_, { name }: GQL.IHelloOnQueryArguments) => `Hello ${name || "World"}`
 };
