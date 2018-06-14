@@ -5,10 +5,13 @@
     "dev": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "build": "rimraf dist && tsc",
     "start": "dotenv -- node ./dist/index.js",
+    "test": "jest",
     "types": "gql2ts src/schema.graphql -o src/schema.d.ts",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-request": "^1.6.0",
     "graphql-yoga": "^1.14.7",
     "pg": "^7.4.3",
     "reflect-metadata": "^0.1.10",
@@ -16,15 +19,33 @@
     "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.1",
+    "@types/jest": "^23.1.0",
     "@types/node": "~10.1.4",
     "@types/uuid": "^3.4.3",
     "dotenv-cli": "^1.4.0",
     "gql2ts": "^1.8.0",
+    "jest": "^23.1.0",
     "nodemon": "^1.17.5",
     "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
     "ts-node": "^6.1.1",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }

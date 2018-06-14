@@ -31,7 +31,7 @@ declare namespace GQL {
 
   interface IMutation {
     __typename: "Mutation";
-    register: boolean | null;
+    register: boolean;
   }
 
   interface IRegisterOnMutationArguments {
