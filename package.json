@@ -5,7 +5,7 @@
     "dev": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "build": "rimraf dist && tsc",
     "start": "dotenv -- node ./dist/index.js",
-    "test": "jest",
+    "test": "jest --forceExit",
     "types": "gql2ts src/schema.graphql -o src/schema.d.ts",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
